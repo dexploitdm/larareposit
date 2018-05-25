@@ -28,16 +28,9 @@
 @yield('navigation')
 
 
-<div class="section-space"></div>
+@yield('slider')
 
-<div class="cd-section" id="headers">
-
-    <div class="header-1">
-        @yield('slider')
-    </div>
-
-</div>
-
+@yield('content')
 
 
 

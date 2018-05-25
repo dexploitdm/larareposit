@@ -1,4 +1,7 @@
-@if($slider)
+<div class="section-space"></div>
+<div class="cd-section" id="headers">
+<div class="header-1">
+        @if($slider)
     @foreach($slider as $item)
         @if($item->img)
             <div class="page-header header-filter" style="background-image: url('{{ asset(env('THEME')) }}/img/sliders/{{ $item->img->path }}');">
@@ -10,7 +13,7 @@
                     <h1 class="title">{!! $item->title !!}</h1>
                     <h4>{!! $item->desc !!}</h4>
                     <br />
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-danger btn-lg">
+                    <a href="https://github.com/dexploitdm/larareposit" target="_blank" class="btn btn-danger btn-lg">
                         <i class="fa fa-git"></i>
                     </a>
                 </div>
@@ -25,3 +28,5 @@
     </div>
     @endforeach
 @endif
+</div>
+</div>

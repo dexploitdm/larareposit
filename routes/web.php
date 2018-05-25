@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('logout','Auth\LoginController@logout');
 Auth::routes();
 
 Route::resource('/','IndexController',[
@@ -23,5 +20,9 @@ Route::resource('/','IndexController',[
 ]);
 
 
-Route::get('logout','Auth\LoginController@logout');
-
+Route::resource ('articles', 'ArticleController',[
+    'parameters' => [
+        'articles' => 'alias'
+    ]
+]);
+Route::get('articles/cat/{cat_alias?}',['uses'=>'ArticleController@index','as'=>'articleCat'])->where('cat_alias','[\w-]+');
