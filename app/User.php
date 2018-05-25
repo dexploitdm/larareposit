@@ -24,6 +24,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token','is_admin',
     ];
+
+    public function isAdmin()
+    {
+        return $this->is_admin; // поле is_admin в таблице users
+    }
 }

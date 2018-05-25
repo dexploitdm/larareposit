@@ -17,4 +17,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/','IndexController',[
+    'only'=>['index'],
+    'names'=> ['index'=>'home']
+]);
+
+
+Route::get('logout','Auth\LoginController@logout');
+
