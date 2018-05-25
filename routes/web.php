@@ -26,3 +26,13 @@ Route::resource ('articles', 'ArticleController',[
     ]
 ]);
 Route::get('articles/cat/{cat_alias?}',['uses'=>'ArticleController@index','as'=>'articleCat'])->where('cat_alias','[\w-]+');
+
+Route::group(['prefix' => 'admin','middleware'=>'auth'], function(){
+
+    Route::get('/',['uses'=>'Admin\IndexController@index','as'=>'adminIndex']);
+
+    Route::resource('/slider','Admin\SliderController');
+    Route::resource('/article','Admin\ArticleController');
+    Route::resource('/menus','Admin\MenusController');
+
+});
