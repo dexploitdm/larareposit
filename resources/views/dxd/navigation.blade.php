@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="presentation.html">Larareposit</a>
+            <a class="navbar-brand" href="/">Larareposit</a>
         </div>
         @if($menu)
             <div class="collapse navbar-collapse">
