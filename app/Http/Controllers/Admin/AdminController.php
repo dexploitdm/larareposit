@@ -31,7 +31,6 @@ class AdminController extends \App\Http\Controllers\Controller
         $this->vars = array_add($this->vars,'title', $this->title);
 
         $menu = $this->getMenu();
-
         $navs = $this->getNav();
         $articles = $this->getArticles();
 
@@ -41,7 +40,6 @@ class AdminController extends \App\Http\Controllers\Controller
             'articles' => $articles
         ])->render();
         $this->vars =array_add($this->vars,'navigation', $navigation);
-
         if($this->content) {
             $this->vars = array_add($this->vars,'content', $this->content);
         }

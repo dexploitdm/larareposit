@@ -20,7 +20,7 @@ class IndexController extends AdminController
 
         $articles = $this->getArticles();
 
-        $this->content =view(env('THEME').'.admin.index')
+        $this->content =view(env('THEME').'.admin.index_content')
             ->with(['articles'=> $articles])->render();
 
         return $this->renderOutput();
