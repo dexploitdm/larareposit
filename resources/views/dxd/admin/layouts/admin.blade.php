@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-    <title>:: Oreo Bootstrap4 Admin ::</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+    <title>:: Dexploitdm Admin ::</title>
+    <link rel="icon" href="{{ asset(env('THEMEA')) }}/favicon.ico" type="image/x-icon"> <!-- Favicon-->
     <link rel="stylesheet" href="{{ asset(env('THEMEA')) }}/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset(env('THEMEA')) }}/assets/plugins/bootstrap-select/css/bootstrap-select.css" />
     <link rel="stylesheet" href="{{ asset(env('THEMEA')) }}/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css"/>
     <link rel="stylesheet" href="{{ asset(env('THEMEA')) }}/assets/plugins/morrisjs/morris.min.css" />
+    <link rel="stylesheet" href="{{ asset(env('THEMEA')) }}/assets/plugins/footable-bootstrap/css/footable.bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset(env('THEMEA')) }}/assets/plugins/footable-bootstrap/css/footable.standalone.min.css">
     <!-- Custom Css -->
     <link rel="stylesheet" href="{{ asset(env('THEMEA')) }}/assets/css/main.css">
+    <link rel="stylesheet" href="{{ asset(env('THEMEA')) }}/assets/css/blog.css">
     <link rel="stylesheet" href="{{ asset(env('THEMEA')) }}/assets/css/color_skins.css">
 </head>
 <body class="theme-purple">
@@ -31,13 +35,13 @@
         <li>
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html"><img src="{{ asset(env('THEMEA')) }}/assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10">Oreo</span></a>
+                <a class="navbar-brand" href="{{route('adminIndex')}}"><img src="{{ asset(env('THEMEA')) }}/assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10">Dexploitdm</span></a>
             </div>
         </li>
         <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
-        <li class="hidden-md-down"><a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
-        <li class="hidden-md-down"><a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a></li>
-        <li><a href="contact.html" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
+        <li class="hidden-md-down"><a href="#" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
+        <li class="hidden-md-down"><a href="#" title="Inbox"><i class="zmdi zmdi-email"></i></a></li>
+        <li><a href="#" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
         <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
                 <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
             </a>
@@ -207,7 +211,7 @@
         </li>
         <li class="float-right">
             <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
-            <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
+            <a href="/logout" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
             <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>
         </li>
     </ul>
@@ -697,12 +701,15 @@
 <!-- Jquery Core Js -->
 <script src="{{ asset(env('THEMEA')) }}/assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
 <script src="{{ asset(env('THEMEA')) }}/assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->
-
 <script src="{{ asset(env('THEMEA')) }}/assets/bundles/morrisscripts.bundle.js"></script><!-- Morris Plugin Js -->
 <script src="{{ asset(env('THEMEA')) }}/assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
 <script src="{{ asset(env('THEMEA')) }}/assets/bundles/knob.bundle.js"></script> <!-- Jquery Knob, Count To, Sparkline Js -->
 
 <script src="{{ asset(env('THEMEA')) }}/assets/bundles/mainscripts.bundle.js"></script>
 <script src="{{ asset(env('THEMEA')) }}/assets/js/pages/index.js"></script>
+<script src="{{ asset(env('THEMEA')) }}/assets/bundles/footable.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+<script src="{{ asset(env('THEMEA')) }}/assets/js/pages/tables/footable.js"></script><!-- Custom Js -->
+<script src="{{ asset(env('THEMEA')) }}/assets/plugins/ckeditor/ckeditor.js"></script> <!-- Ckeditor -->
+<script src="{{ asset(env('THEMEA')) }}/assets/js/pages/forms/editors.js"></script>
 </body>
 </html>

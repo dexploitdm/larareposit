@@ -34,5 +34,4 @@ Route::group(['prefix' => 'admin','middleware'=>'auth'], function(){
     Route::resource('/slider','Admin\SliderController');
     Route::resource('/article','Admin\ArticleController');
     Route::resource('/menus','Admin\MenusController');
-
 });

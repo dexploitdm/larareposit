@@ -11,8 +11,8 @@
                         <div class="user-info">
                             <div class="image"><a href="profile.html"><img src="{{ asset(env('THEMEA')) }}/assets/images/profile_av.jpg" alt="User"></a></div>
                             <div class="detail">
-                                <h4>Michael</h4>
-                                <small>UI UX Designer</small>
+                                <h4>Dexploitdm</h4>
+                                <small>Web Developer</small>
                             </div>
                             <a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a>
                             <a title="twitter" href="#"><i class="zmdi zmdi-twitter"></i></a>
@@ -29,9 +29,9 @@
                             <li><a href="blog-dashboard.html">Blog</a></li>
                         </ul>
                     </li>
-                    <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>App</span> </a>
+                    <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Главная</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="mail-inbox.html">Inbox</a></li>
+                            <li><a href="mail-inbox.html">Статьи</a></li>
                             <li><a href="chat.html">Chat</a></li>
                             <li><a href="events.html">Calendar</a></li>
                             <li><a href="file-dashboard.html">File Manager</a></li>

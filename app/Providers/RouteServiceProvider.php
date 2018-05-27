@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -23,9 +24,13 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-
+       // $router->pattern('alias','[\w-]+');
+        Route::pattern('alias', '[a-z0-9.\-]+');
         parent::boot();
+
+        Route::bind('article', function($value) {
+            return \App\Article::where('alias', $value)->first();
+        });
     }
 
     /**
