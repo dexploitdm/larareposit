@@ -32,7 +32,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="profile"> <b>Ссылка на разделы</b>
+                        <div role="tabpanel" class="tab-pane" id="profile">
+                            <label><span class="badge badge-info">Предупреждение</span> Прежде чем добавить ссылку на раздел, его нужно создать</label>
                             <div class="radio">
                                 {!! Form::radio('type', 'articleLink',(isset($type) && $type == 'articleLink') ? TRUE : FALSE,[
                                 'class' => 'radioMenu','id'=>'radio2']) !!}
@@ -66,7 +67,7 @@
                 <div class="body">
                     <div class="form-group">
                         <label>Заголовок ссылки</label>
-                        {!! Form::text('title',isset($menu->title) ? $menu->title  : old('title'), ['class'=>'form-control','style'=>'width: auto']) !!}
+                        {!! Form::text('title',isset($menu->title) ? $menu->title  : old('title'), ['class'=>'form-control','style'=>'width: auto', 'required']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::button('Сохранить', ['class' => 'btn btn-primary btn-round waves-effect m-t-20','type'=>'submit']) !!}

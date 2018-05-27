@@ -705,7 +705,7 @@
                 <div class="body">
                     @foreach ($errors->all() as $error)
                         <div class="typography-line">
-                            <span>Ошибка!</span>
+                            <span class="badge badge-warning">Warning</span>
                             <p class="text-danger" style="display: inline-block; padding-left: 15px;"> {{ $error }}</p>
                         </div>
                     @endforeach
@@ -721,7 +721,7 @@
                     </div>
                     <div class="body">
                         <div class="typography-line">
-                            <span>Успешно!</span>
+                            <span class="badge badge-success">Успешно</span>
                             <p class="text-success" style="display: inline-block; padding-left: 15px;">{{ session('status') }}</p>
                         </div>
                     </div>
@@ -736,7 +736,7 @@
                     </div>
                     <div class="body">
                         <div class="typography-line">
-                            <span>Ошибка!</span>
+                            <span class="badge badge-danger">Ошибка</span>
                             <p class="text-danger" style="display: inline-block; padding-left: 15px;"> {{ session('error') }}</p>
                         </div>
                     </div>
