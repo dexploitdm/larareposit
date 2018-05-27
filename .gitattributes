@@ -1,4 +1,4 @@
 * linguist-vendored
-*.html linguist-vendored=true
+*.rb linguist-language=Java
 *.php linguist-vendored=false
 
