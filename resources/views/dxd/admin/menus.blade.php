@@ -18,7 +18,7 @@
                     </button></a>
                 <ul class="breadcrumb float-md-right">
                     <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="zmdi zmdi-home"></i> Site</a></li>
-                    <li class="breadcrumb-item active">Dashboard</li>
+                    <li class="breadcrumb-item active"><a href="{{route('adminIndex')}}">Dashboard</a></li>
                     <li class="breadcrumb-item active"><a href="{{ route('menus.index') }}">Навигация</a></li>
                 </ul>
             </div>

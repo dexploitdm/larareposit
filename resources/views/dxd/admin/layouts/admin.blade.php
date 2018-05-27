@@ -696,6 +696,53 @@
 
 <!-- Main Content -->
 <section class="content home">
+    @if (count($errors) > 0)
+        <div class="container-fluid">
+            <div class="card">
+                <div class="header">
+                    <h2><strong>Статус</strong></h2>
+                </div>
+                <div class="body">
+                    @foreach ($errors->all() as $error)
+                        <div class="typography-line">
+                            <span>Ошибка!</span>
+                            <p class="text-danger" style="display: inline-block; padding-left: 15px;"> {{ $error }}</p>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    @endif
+    @if (session('status'))
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="header">
+                        <h2><strong>Статус</strong></h2>
+                    </div>
+                    <div class="body">
+                        <div class="typography-line">
+                            <span>Успешно!</span>
+                            <p class="text-success" style="display: inline-block; padding-left: 15px;">{{ session('status') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    @endif
+    @if (session('error'))
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="header">
+                        <h2><strong>Статус</strong></h2>
+                    </div>
+                    <div class="body">
+                        <div class="typography-line">
+                            <span>Ошибка!</span>
+                            <p class="text-danger" style="display: inline-block; padding-left: 15px;"> {{ session('error') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    @endif
     @yield('content')
 </section>
 <!-- Jquery Core Js -->
