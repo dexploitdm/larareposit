@@ -31,6 +31,9 @@ class RouteServiceProvider extends ServiceProvider
         Route::bind('article', function($value) {
             return \App\Article::where('alias', $value)->first();
         });
+        Route::bind('menus', function($value) {
+            return \App\Menu::where('id', $value)->first();
+        });
     }
 
     /**

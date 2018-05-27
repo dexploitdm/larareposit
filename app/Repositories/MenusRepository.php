@@ -21,17 +21,17 @@ class MenusRepository extends Repository {
             case 'customLink':
                 $data['path'] = $request->input('custom_link');
                 break;
-            case 'blogLink':
+            case 'articleLink':
                 if($request->input('category_alias')) {
                     if($request->input('category_alias') == 'parent') {
-                        $data['path'] = route('blog.index');
+                        $data['path'] = route('article.index');
                     }
                     else {
-                        $data['path'] = route('blogCat',['cat_alias' => $request->input('category_alias')]);
+                        $data['path'] = route('articleCat',['cat_alias' => $request->input('category_alias')]);
                     }
                 }
-                else if($request->input('blog_alias')) {
-                    $data['path'] = route('blog.show',['alias' =>$request->input('blog_alias')]);
+                else if($request->input('article_alias')) {
+                    $data['path'] = route('article.show',['alias' =>$request->input('article_alias')]);
                 }
                 break;
         }
@@ -54,17 +54,17 @@ class MenusRepository extends Repository {
             case 'customLink':
                 $data['path'] = $request->input('custom_link');
                 break;
-            case 'blogLink':
+            case 'articleLink':
                 if($request->input('category_alias')) {
                     if($request->input('category_alias') == 'parent') {
-                        $data['path'] = route('blog.index');
+                        $data['path'] = route('article.index');
                     }
                     else {
-                        $data['path'] = route('blogCat',['cat_alias' => $request->input('category_alias')]);
+                        $data['path'] = route('articleCat',['cat_alias' => $request->input('category_alias')]);
                     }
                 }
-                else if($request->input('blog_alias')) {
-                    $data['path'] = route('blog.show',['alias' =>$request->input('blog_alias')]);
+                else if($request->input('article_alias')) {
+                    $data['path'] = route('article.show',['alias' =>$request->input('article_alias')]);
                 }
                 break;
         }

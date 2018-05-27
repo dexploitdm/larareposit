@@ -22,8 +22,8 @@
                     <li class="header">MAIN</li>
                     <li class="active open"> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
                         <ul class="ml-menu">
-                            <li class="active"><a href="index.html">Main</a> </li>
-                            <li><a href="dashboard-rtl.html">RTL</a></li>
+                            <li class="active"><a href="{{ route('adminIndex') }}">Главная</a></li>
+                            <li><a href="{{ route('menus.index') }}">Навигация</a></li>
                             <li><a href="index2.html">Horizontal</a></li>
                             <li><a href="ec-dashboard.html">Ecommerce</a></li>
                             <li><a href="blog-dashboard.html">Blog</a></li>
@@ -31,7 +31,7 @@
                     </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Главная</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="mail-inbox.html">Статьи</a></li>
+                            <li><a href="{{ route('article.index') }}">Статьи</a></li>
                             <li><a href="chat.html">Chat</a></li>
                             <li><a href="events.html">Calendar</a></li>
                             <li><a href="file-dashboard.html">File Manager</a></li>
